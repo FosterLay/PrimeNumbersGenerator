@@ -7,48 +7,27 @@ import org.junit.jupiter.api.Test;
 class Testing {
 	@Test
 	void tes1() {
-		ArrayList<Integer> numbers = Generator.gen("");
+		ArrayList<Integer> numbers = Generator.gen(-100);
 		if (numbers!=null) {
 			fail();
 		}
 	}
 	@Test
 	void test2() {
-		ArrayList<Integer> numbers = Generator.gen("-100");
+		ArrayList<Integer> numbers = Generator.gen(2);
 		if (numbers!=null) {
 			fail();
 		}
 	}
 	@Test
 	void test3() {
-		ArrayList<Integer> numbers = Generator.gen("10000000000000000000000000000001");
-		if (numbers!=null) {
-			fail();
-		}
-	}
-	@Test
-	void test4() {
-		ArrayList<Integer> numbers = Generator.gen("1021a");
-		if (numbers!=null) {
-			fail();
-		}
-	}
-	@Test
-	void test5() {
-		ArrayList<Integer> numbers = Generator.gen("2");
-		if (numbers!=null) {
-			fail();
-		}
-	}
-	@Test
-	void test6() {
-		ArrayList<Integer> numbers = Generator.gen("3");
+		ArrayList<Integer> numbers = Generator.gen(3);
 		if (numbers.get(0) != 2) {
 			fail();
 		}
 	}
 	@Test
-	void test7() {
+	void test5() {
 		int[] output = new int[] {2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,
 				73,79,83,89,97,101,103,107,109,113,127,131,137,139,149,151,157,163,167,173,
 				179,181,191,193,197,199,211,223,227,229,233,239,241,251,257,263,269,271,277,
@@ -59,7 +38,7 @@ class Testing {
 				769,773,787,797,809,811,821,823,827,829,839,853,857,859,863,877,881,883,887,
 				907,911,919,929,937,941,947,953,967,971,977,983,991,997,1009,1013,1019,1021,
 				1031,1033,1039,1049,1051,1061,1063,1069,1087,1091,1093,1097,1103,1109};
-		ArrayList<Integer> numbers = Generator.gen("1111");
+		ArrayList<Integer> numbers = Generator.gen(1111);
 		if (output.length != numbers.size()) {
 			fail();
 		}
